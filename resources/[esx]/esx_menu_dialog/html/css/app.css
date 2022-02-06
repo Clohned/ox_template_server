@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+#controls {
+	font-family: 'Poppins', sans-serif !important;
+	color: #F8E6C9;
+	position: absolute;
+	bottom: 40;
+	right: 40;
+}
+
+.controls {
+	display: none;
+}
+
+.dialog {
+	font-family: 'Poppins', sans-serif !important;
+	font-weight: bold;
+	position: relative;
+	background: #070707;
+	color: white;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 210px;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	animation: fadeIn 1.1s;
+}
+
+.title {
+	margin-top: 25px;
+	margin-bottom: 25px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+	letter-spacing: 4px;
+	text-transform:uppercase;
+}
+
+.subtitle {
+	margin-top: 10px;
+	margin-left: 25px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.748);
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.head {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+}
+
+.dialog.big {
+	height: 200px;
+}
+
+.dialog .head {
+	background-color: #ffffff;
+	text-align: center;
+	height: 40px;
+}
+
+.dialog .head span::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.dialog input[type="text"] {
+	width: 84%;
+	height: 32px;
+	outline: none;
+	background: #111518;
+    border-radius: 5px;
+    border: none;
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-right: 25px;
+	color: #ffffff;
+	font-weight: bold;
+	position: relative;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+}
+
+.dialog input[type="text"]:focus { 
+    outline: none;
+    box-shadow: inset 0px 0px 0px 2px #0984e3;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: linear, ease-in;
+}
+
+
+.dialog textarea {
+	width: 100%;
+	height: 128px;
+}
+
+.dialog button {
+	font-family: 'Poppins', sans-serif !important;
+	margin-top: 30px;
+	border: 0;
+	height: 29px;
+	color: rgb(250, 250, 250);
+	font-weight: bold;
+	position: relative;
+	width: 20%;
+	border-radius: 3px;
+	outline: 0;
+}
+
+.dialog button[name="submit"] {
+  margin-left: 40%;
+  background-color: #111518;
+}
+
+.dialog button[name="submit"]:hover {
+  /*nimation: pulse_green 1s infinite;*/
+  background-color: #0984e3;
+  color: black;
+}
+
+.head::before,
+.head::after {
+	content: "";
+	flex-grow: 1;
+	background: #1f2533;
+	height: 2px;
+	margin: 0px 3px;
+}

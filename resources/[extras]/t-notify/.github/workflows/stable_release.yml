@@ -1,0 +1,33 @@
+name: Release Publisher
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  create_stable_release:
+    name: "Create a Stable Release"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2.3.4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Get Version Tag
+        id: get_version_tag
+        run: echo ::set-output name=VERSION_TAG::${GITHUB_REF/refs\/tags\//}
+
+      - name: Create Zip Release
+        run: |
+          mkdir -p ./temp/t-notify
+          cp -r ./{nui,config.lua,deprecated.lua,fxmanifest.lua,main.lua,LICENSE,README.md,update.lua,version} ./temp/t-notify
+          cd ./temp && zip -r t-notify-${{ steps.get_version_tag.outputs.VERSION_TAG }}.zip ./t-notify
+
+      - name: Create and Upload Release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: false
+          files: ./temp/t-notify-${{ steps.get_version_tag.outputs.VERSION_TAG }}.zip

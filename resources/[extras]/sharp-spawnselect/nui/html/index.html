@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../css/style.css">
+<script defer src="../js/script.js"></script>
+<title>
+SHARP-SPAWNSELECTOR
+</title>
+<div class="copyright">Created by Zentrox#0650</div>
+</head>
+<body>
+
+<div class="container LastLocation">
+    <div class="" id="LastLocation" onclick="displayShowContent(getElementById('LastLocation-content'))"></i>
+    <div class="buttonlast" id="LastLocation-content">
+        <button onclick="LastLocation()">LAST POSITION</button>
+    </div>
+</div>
+
+
+<div class="container torget">
+    <i class="fas fa-map-marker-alt marker torgetmarker" id="torget" onclick="displayShowContent(getElementById('torget-content'))"></i>
+    <div class="content-container" id="torget-content">
+        <img height="160px" width="280px" src="../media/torget.png">
+        <h1>
+        legion square
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnTorget()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container mrpd">
+    <i class="fas fa-map-marker-alt marker" id="mrpd" onclick="displayShowContent(getElementById('mrpd-content'))"></i>
+    <div class="content-container" id="mrpd-content">
+        <img height="160px" width="280px" src="../media/mrpd.png">
+        <h1>
+        mrpd
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnMRPD()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container pink">
+    <i class="fas fa-map-marker-alt marker" id="pink" onclick="displayShowContent(getElementById('pink-content'))"></i>
+    <div class="content-container" id="pink-content">
+        <img height="160px" width="280px" src="../media/pink.png">
+        <h1>
+        pink cage
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnPink()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container trondheim">
+    <i class="fas fa-map-marker-alt marker" id="trondheim" onclick="displayShowContent(getElementById('trondheim-content'))"></i>
+    <div class="content-container" id="trondheim-content">
+        <img height="160px" width="280px" src="../media/trondheim.png">
+        <h1>
+        sandy shores
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnTrondheim()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container tromso">
+    <i class="fas fa-map-marker-alt marker" id="tromso" onclick="displayShowContent(getElementById('tromso-content'))"></i>
+    <div class="content-container" id="tromso-content">
+        <img height="160px" width="280px" src="../media/tromso.png">
+        <h1>
+        paleto bay
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnTromso()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container strandmotel strandmotelcontainer">
+    <i class="fas fa-map-marker-alt marker" id="strandmotel" onclick="displayShowContent(getElementById('strandmotel-content'))"></i>
+    <div class="content-container upper" id="strandmotel-content">
+        <img height="160px" width="280px" src="../media/strandmotel.png">
+        <h1>
+        perrera beach motel
+        </h1>
+        <p>
+        Some text here.
+        </p>
+        <button onclick="SpawnStrandmotel()">SPAWN</button>
+    </div>
+</div>
+
+<div class="container gardermoen gardermoencontainer">
+    <i class="fas fa-map-marker-alt marker" id="gardermoen" onclick="displayShowContent(getElementById('gardermoen-content'))"></i>
+    <div class="content-container upper2" id="gardermoen-content">
+        <img height="160px" width="280px" src="../media/gardermoen.png">
+        <h1>
+        airport
+        </h1>
+        <p>
+        Some text here. 
+        </p>
+        <button onclick="SpawnGardermoen()">SPAWN</button>
+    </div>
+</div>
+
+<script defer src="../js/script.js"></script>
+</body>
+</html>

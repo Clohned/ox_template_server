@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+body {
+    background-image: url(../media/map.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+/* GLOBAL SHIT */
+
+.marker {
+    position:absolute; left:50%;  transform: translate(-50%, 0%);
+    font-size: 30px;
+    text-align: center;
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: red;
+    z-index: 1;
+    transition: 0.2s;
+    /* border: 2px solid yellow; */
+}
+
+.marker:hover {
+    color: rgb(30, 255, 0);
+}
+
+.container {
+    /* border: 3px solid violet; */
+    width: 300px;
+    height: 460px;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.05)
+}
+
+.content-container {
+    border: 3px solid green;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #161923;
+    position: relative;
+    z-index: 1001;
+    margin-top: 50px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 4px 3px rgba(0,0,0,0.16);
+    height: 360px;
+    user-select: none;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 10px;
+    font-style: italic;
+}
+
+
+img {
+    filter: grayscale(100%);
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+.content-container button {
+    background-color: #161923;
+    border: 3px solid #f40552;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.content-container button:hover {
+    background-color: #f40552;
+    border: 3px solid #f40552;
+    color: white;
+}
+
+.buttonlast button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #161923;
+    border: 3px solid #f40552;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.buttonlast button:hover {
+    background-color: #f40552;
+    border: 3px solid #f40552;
+    color: white;
+}
+
+
+.content-container img {
+    margin-top: 8px;
+}
+
+.upper {
+    height: 360px;
+    width: 290px;
+    position: fixed;
+    bottom: 330px;
+    z-index: 1000;
+
+}
+
+.upper2 {
+    height: 360px;
+    width: 290px;
+    position: fixed;
+    bottom: 385px;
+    z-index: 1000;
+
+}
+
+.upper p {
+    padding: 0px 10px;
+}
+
+.upper2 p {
+    padding: 0px 10px;
+}
+
+/* LOCATIONS */
+
+.strandmotel {
+    position: fixed;
+    right: 435px;
+    bottom: -150px;
+}
+
+.strandmotelcontainer {
+    z-index: 400;
+}
+
+.gardermoen {
+    position: fixed;
+    right: 170px;
+    bottom: -95px;
+}
+
+.gardermoencontainer {
+    z-index: 400;
+}
+
+.torget {
+    position: absolute;
+    right: 420px;
+    bottom: 70px;
+}
+
+.mrpd {
+    position: absolute;
+    right: 396px;
+    bottom: 100px;
+}
+
+.mosley {
+    position: absolute;
+    right: 310px;
+    bottom: 40px;
+}
+
+/* .autoexotic {
+    position: absolute;
+    right: 500px;
+    bottom: 110px;
+} */
+
+.pink {
+    position: absolute;
+    right: 495px;
+    bottom: 85px;
+}
+
+.trondheim {
+    position: absolute;
+    right: 1020px;
+    bottom: 270px;
+}
+
+.tromso {
+    position: absolute;
+    left: 225px;
+    bottom: 60px;
+}
+
+.nav {
+    position: absolute;
+    right: 435px;
+    bottom: 5px;
+}
+
+.lastlocation {
+    position: absolute;
+}
+
+#lastlocation-content {
+    display: absolute;
+}
+
+#torget-content {
+    display: none;
+}
+
+#mrpd-content {
+    display: none;
+}
+
+/* #mosley-content {
+    display: none;
+} */
+
+/* #autoexotic-content {
+    display: none;
+} */
+
+#pink-content {
+    display: none;
+}
+
+#trondheim-content {
+    display: none;
+}
+
+#tromso-content {
+    display: none;
+}
+
+#strandmotel-content {
+    display: none;
+}
+
+#gardermoen-content {
+    display: none;
+}
+
+#nav-content {
+    display: none;
+}
+
+.selected {
+    display: block !important;
+}
+
+.content-container .selected {
+    z-index: 1500;
+}
+
+
+@media screen and (min-width: 2560px) { 
+    .torget {
+        position: absolute;
+        right: 615px;
+        bottom: 240px;
+    }
+    .mrpd {
+        position: absolute;
+        right: 575px;
+        bottom: 275px;
+    }
+    .pink {
+        position: absolute;
+        right: 718px;
+        bottom: 250px;
+    }
+    .strandmotel {
+        position: fixed;
+        right: 635px;
+        bottom: -57px;
+    }
+    .gardermoen {
+        position: fixed;
+        right: 275px;
+        bottom: 15px;
+    }
+    .trondheim {
+        position: absolute;
+        left: 865px;
+        bottom: 515px;
+    }
+    .tromso {
+        position: absolute;
+        left: 360px;
+        bottom: 220px;
+    }
+    .upper {
+        height: 360px;
+        width: 290px;
+        position: fixed;
+        bottom: 385px;
+        z-index: 1000;
+    }
+    .upper2 {
+        height: 360px;
+        width: 290px;
+        position: fixed;
+        bottom: 450px;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 3440px) {
+    body {
+        background-color: #1dacd4;
+        margin: auto;
+        background-size: 2600px;
+        background-position: 360px 0;
+        position: fixed;
+    }
+    .torget {
+        position: fixed;
+        right: 1105px;
+        bottom: 226px;
+        z-index: 1001;
+    }
+    .mrpd {
+        position: fixed;
+        right: 1070px;
+        bottom: 265px;
+    }
+    .pink {
+        position: fixed;
+        right: 1210px;
+        bottom: 240px;
+    }
+    .strandmotel {
+        position: fixed;
+        right: 1130px;
+        bottom: -75px;
+        z-index: 1002;
+    }
+    .gardermoen {
+        position: fixed;
+        right: 765px;
+        bottom: 8px;
+    }
+    .trondheim {
+        position: fixed;
+        left: 1240px;
+        bottom: 510px;
+    }
+    .tromso {
+        position: fixed;
+        left: 725px;
+        bottom: 210px;
+    }
+    .upper {
+        height: 360px;
+        width: 290px;
+        position: fixed;
+        bottom: 385px;
+        z-index: 1000;
+    }
+    .upper2 {
+        height: 360px;
+        width: 290px;
+        position: fixed;
+        bottom: 450px;
+        z-index: 1000;
+    }
+}
