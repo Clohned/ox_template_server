@@ -1,14 +1,12 @@
 # OX Base Template Server
-This repo contains resources for a "base" ESX server utilizing oxmysql, ox_inventory, NPWD, es_extended (ox version), esx_multicharacter (ox supported version) as well as many other "base" resources to get you started.
+This repo is an updated version of Judd's ox_base_template_server, as he discontinued his repo I will still be contributing to this one for everyone. This repo contains resources for a "base" ESX server utilizing oxmysql, ox_inventory, NPWD, es_extended (ox version), esx_multicharacter (ox supported version) as well as many other "base" resources to get you started.
 
 ```diff
 - THIS IS NOT A FULL SERVER! Only a base to get you started.
-+ This package may NOT get updated often, so if you want "bleeding edge" updates you will need to do so yourself.
++ This repo may NOT get updated often, so if you want certain updates you will need to do so yourself.
 ```
 
 With that being said, right out the gate everything will be working/usable but of course you will need to adjust some configs that will be tailored to your needs.
-
-[PREVIEW VIDEO](https://www.youtube.com/watch?v=mCVBKO9b_J8)
 
 ## Main Resources
 * [ox_inventory](https://github.com/overextended/ox_inventory)
@@ -29,7 +27,7 @@ With that being said, right out the gate everything will be working/usable but o
 ## Important Information
 **Make sure to replace the "replaceme" text in server.cfg with your proper information!**
 
-To use photos for NPWD you need to follow the install guide here - https://projecterror.dev/docs/npwd/start/installation#setting-up-camera-functionality 
+To use photos for NPWD you need to follow the installation guide here - https://projecterror.dev/docs/npwd/start/installation#setting-up-camera-functionality 
 
 You can also just run FXServer.exe and during setup choose like CFX Default template and after setup
 just delete resources created from setup and replace with the resources folder provided.
@@ -41,6 +39,4 @@ CREATE DATABASE IF NOT EXISTS `oxtemplate` /*!40100 DEFAULT CHARACTER SET utf8mb
 USE `oxtemplate`;
 
 ## Support
-We will not be providing direct support for this. We will keep it updated when we can but if you struggle using this then you will struggle with more and you will need to figure out things for yourself. Don't be lazy, google, check cfx forums, ask in discords, etc...
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P57KRR9)
+I will not be providing direct support for this. I will keep it updated when I can but if you struggle using this then you will struggle with more and you will need to figure out things for yourself. Use google, check cfx forums, ask in discords, etc...
